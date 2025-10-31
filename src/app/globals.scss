@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  // user-select: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+:root {
+  /*  colors */
+  /* primary colors */
+  --clr-black: #000010;
+  --clr-grey: #cacac8;
+  --clr-white: #ffffff;
+  --clr-brown: #b6846b;
+  --clr-red: #e73a3c;
+  --clr-grey-2: #f4f4f4;
+
+  /*  typography  --heading  */
+  --sz-h1: 3rem;
+  --sz-h2: 1.3rem;
+  --sz-h3: 1.1rem;
+
+  /*  typography  --body  */
+  --sz-p-m: 1rem;
+  --sz-p-s: 0.9rem;
+}

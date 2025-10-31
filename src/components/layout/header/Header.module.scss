@@ -1,0 +1,217 @@
+.Header {
+  padding: 20px 0;
+  box-shadow: 0 0 10px 1px silver;
+  background: white;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        height: 60px;
+        width: 60px;
+        object-fit: contain;
+      }
+
+      p {
+        font-size: 12px;
+        font-weight: 900;
+        line-height: 1.2;
+
+        @media (max-width: 420px) {
+          font-weight: 600;
+          font-size: 10px;
+        }
+      }
+    }
+
+    .nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 5px;
+
+      .links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
+
+        p {
+          font-size: 16px;
+          transition: 0.2s ease-in-out;
+
+          span {
+            cursor: pointer;
+            font-weight: 600;
+          }
+
+          &:hover {
+            transform: translateX(-3px);
+          }
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: black;
+          font-size: 20px;
+          transition: 0.2s ease-in-out;
+
+          &:hover {
+            transform: translateY(-3px);
+            color: var(--clr-red);
+          }
+        }
+      }
+
+      .pages {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        a {
+          font-size: 16px;
+          color: black;
+          font-weight: 500;
+          position: relative;
+          transition: color 0.3s ease-in-out;
+
+          &::after {
+            content: "";
+            bottom: -4px;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            border-radius: 50px;
+            left: 0;
+            background: black;
+            transition: 0.3s ease-in-out;
+            transform: scaleX(0);
+          }
+
+          &:hover {
+            color: #d31e1e;
+          }
+
+          &:hover::after,
+          &.active::after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+
+    .burger {
+      display: none;
+    }
+
+    @media (max-width: 975px) {
+      .nav {
+        display: none;
+      }
+
+      .burger {
+        display: flex;
+        z-index: 110;
+      }
+    }
+  }
+
+  .menu {
+    transition: right 0.3s ease-in-out;
+    box-shadow: 0 0 10px 1px silver;
+    position: fixed;
+    top: 105px;
+    right: -400px;
+    padding: 25px 20px;
+    width: 300px;
+    background: white;
+    z-index: 105;
+    border-radius: 12px 0 0 12px;
+
+    .nav {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      p {
+        font-size: 18px;
+        span {
+          cursor: pointer;
+          font-weight: 600;
+        }
+      }
+
+      .links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: flex-start;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: black;
+          font-size: 28px;
+          transition: 0.3s ease;
+
+          &:hover {
+            color: #d31e1e;
+            transform: translateY(-3px);
+          }
+        }
+      }
+
+      .pages {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+
+        a {
+          width: max-content;
+          font-size: 16px;
+          color: black;
+          font-weight: 500;
+          position: relative;
+          transition: color 0.3s ease-in-out;
+
+          &::after {
+            content: "";
+            bottom: -4px;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            border-radius: 50px;
+            left: 0;
+            background: black;
+            transition: 0.3s ease-in-out;
+            transform: scaleX(0);
+          }
+
+          &:hover {
+            color: #d31e1e;
+          }
+
+          &:hover::after,
+          &.active::after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+}

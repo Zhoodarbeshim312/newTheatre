@@ -1,0 +1,111 @@
+.Subscription {
+  padding: 60px 0;
+  background: #fff;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #222;
+
+      @media (max-width: 768px) {
+        font-size: 28px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 24px;
+      }
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+
+      img {
+        border-radius: 20px;
+        object-fit: cover;
+        width: 500px;
+        height: 320px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.03);
+        }
+
+        @media (max-width: 992px) {
+          width: 400px;
+          height: 260px;
+        }
+
+        @media (max-width: 768px) {
+          width: 300px;
+          height: 200px;
+        }
+
+        @media (max-width: 500px) {
+          width: 90%;
+          height: auto;
+        }
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    .buy {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      max-width: 700px;
+
+      p {
+        font-size: 18px;
+        color: #333;
+        line-height: 1.6;
+
+        @media (max-width: 768px) {
+          font-size: 16px;
+          padding: 0 15px;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 15px;
+        }
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 10px 35px;
+        font-size: 18px;
+        border-radius: 5px;
+        background: var(--clr-brown);
+        border: none;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(1.05);
+          background: #b06020;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 16px;
+          padding: 8px 28px;
+        }
+      }
+    }
+  }
+}
