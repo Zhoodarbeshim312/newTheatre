@@ -1,7 +1,12 @@
 import { FC } from "react";
+import Cards from "./poster/cards/Cards";
 
 const PosterPage: FC = () => {
-  return <></>;
+  return (
+    <>
+      <Cards />
+    </>
+  );
 };
 
 export default PosterPage;

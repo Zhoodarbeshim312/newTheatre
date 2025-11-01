@@ -1,0 +1,136 @@
+.Cards {
+  padding: 40px 0;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .category {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap; // чтобы кнопки переносились на маленьких экранах
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+
+      button {
+        margin-top: 5px;
+        padding: 10px 25px;
+        font-size: 16px;
+        border-radius: 5px;
+        background: var(--clr-brown);
+        border: none;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(1.05);
+          background: #b06020;
+        }
+      }
+    }
+
+    .cards {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      .card {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        .imageWrapper {
+          width: 100%;
+          height: 200px;
+          position: relative;
+        }
+
+        h3 {
+          margin: 15px 0;
+          font-size: 18px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/* Адаптивка */
+@media (max-width: 768px) {
+  .Cards {
+    padding: 30px 0;
+
+    .content {
+      .category {
+        gap: 10px;
+
+        button {
+          padding: 8px 20px;
+          font-size: 14px;
+        }
+      }
+
+      .cards {
+        gap: 15px;
+
+        .card {
+          .imageWrapper {
+            height: 180px;
+          }
+
+          h3 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Cards {
+    padding: 20px 0;
+
+    .content {
+      .category {
+        gap: 8px;
+
+        button {
+          padding: 6px 15px;
+          font-size: 12px;
+        }
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+
+        .card {
+          .imageWrapper {
+            height: 150px;
+          }
+
+          h3 {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
