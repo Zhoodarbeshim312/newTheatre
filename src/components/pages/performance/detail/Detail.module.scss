@@ -31,14 +31,13 @@
       img {
         border-radius: 12px;
         object-fit: cover;
-        width: 400px; /* увеличено с 350px */
+        width: 400px;
         height: auto;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
       }
     }
   }
 
-  /* 📱 Адаптив */
   @media (max-width: 1024px) {
     .content {
       gap: 30px;
@@ -48,7 +47,7 @@
       }
 
       .img img {
-        width: 320px; /* увеличено с 280px */
+        width: 320px;
       }
     }
   }
@@ -66,7 +65,7 @@
       }
 
       .img img {
-        width: 85%; /* чуть больше чем было 80% */
+        width: 85%;
         height: auto;
       }
     }
