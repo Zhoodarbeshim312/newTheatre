@@ -54,7 +54,6 @@
   }
 }
 
-/* 📱 Адаптив */
 @media (max-width: 768px) {
   .Cards {
     padding: 40px 0;
@@ -79,7 +78,7 @@
   .Cards {
     .content {
       .cards {
-        grid-template-columns: 1fr; /* одна карточка на маленьких экранах */
+        grid-template-columns: 1fr;
       }
 
       h1 {

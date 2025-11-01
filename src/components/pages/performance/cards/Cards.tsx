@@ -24,7 +24,7 @@ const Cards: FC = () => {
   const data: IData[] = [
     {
       id: 1,
-      img: "https://abal.kg/wp-content/uploads/2021/05/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-07-05-2021-124040.png",
+      img: "https://sputnik.kg/img/103469/24/1034692483_0:0:1566:2048_600x0_80_0_0_b255304384f64800068e8f7b7024e808.jpg",
       title: "Жамила",
       info: {
         id: 1,
@@ -39,7 +39,7 @@ const Cards: FC = () => {
     },
     {
       id: 2,
-      img: "https://abal.kg/wp-content/uploads/2021/05/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-07-05-2021-124040.png",
+      img: "https://sputnik.kg/img/103469/24/1034692483_0:0:1566:2048_600x0_80_0_0_b255304384f64800068e8f7b7024e808.jpg",
       title: "Жамила",
       info: {
         id: 2,
@@ -54,7 +54,7 @@ const Cards: FC = () => {
     },
     {
       id: 3,
-      img: "https://abal.kg/wp-content/uploads/2021/05/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-07-05-2021-124040.png",
+      img: "https://sputnik.kg/img/103469/24/1034692483_0:0:1566:2048_600x0_80_0_0_b255304384f64800068e8f7b7024e808.jpg",
       title: "Жамила",
       info: {
         id: 3,
@@ -69,7 +69,7 @@ const Cards: FC = () => {
     },
     {
       id: 4,
-      img: "https://abal.kg/wp-content/uploads/2021/05/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-07-05-2021-124040.png",
+      img: "https://sputnik.kg/img/103469/24/1034692483_0:0:1566:2048_600x0_80_0_0_b255304384f64800068e8f7b7024e808.jpg",
       title: "Жамила",
       info: {
         id: 4,
@@ -84,7 +84,7 @@ const Cards: FC = () => {
     },
     {
       id: 5,
-      img: "https://abal.kg/wp-content/uploads/2021/05/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-07-05-2021-124040.png",
+      img: "https://sputnik.kg/img/103469/24/1034692483_0:0:1566:2048_600x0_80_0_0_b255304384f64800068e8f7b7024e808.jpg",
       title: "Жамила",
       info: {
         id: 5,
@@ -99,7 +99,7 @@ const Cards: FC = () => {
     },
     {
       id: 6,
-      img: "https://abal.kg/wp-content/uploads/2021/05/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-07-05-2021-124040.png",
+      img: "https://sputnik.kg/img/103469/24/1034692483_0:0:1566:2048_600x0_80_0_0_b255304384f64800068e8f7b7024e808.jpg",
       title: "Жамила",
       info: {
         id: 6,
@@ -114,7 +114,7 @@ const Cards: FC = () => {
     },
     {
       id: 7,
-      img: "https://abal.kg/wp-content/uploads/2021/05/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-07-05-2021-124040.png",
+      img: "https://sputnik.kg/img/103469/24/1034692483_0:0:1566:2048_600x0_80_0_0_b255304384f64800068e8f7b7024e808.jpg",
       title: "Жамила",
       info: {
         id: 7,
@@ -129,7 +129,7 @@ const Cards: FC = () => {
     },
     {
       id: 8,
-      img: "https://abal.kg/wp-content/uploads/2021/05/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-07-05-2021-124040.png",
+      img: "https://sputnik.kg/img/103469/24/1034692483_0:0:1566:2048_600x0_80_0_0_b255304384f64800068e8f7b7024e808.jpg",
       title: "Жамила",
       info: {
         id: 8,
@@ -144,7 +144,7 @@ const Cards: FC = () => {
     },
     {
       id: 9,
-      img: "https://abal.kg/wp-content/uploads/2021/05/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-07-05-2021-124040.png",
+      img: "https://sputnik.kg/img/103469/24/1034692483_0:0:1566:2048_600x0_80_0_0_b255304384f64800068e8f7b7024e808.jpg",
       title: "Жамила",
       info: {
         id: 9,
@@ -159,7 +159,7 @@ const Cards: FC = () => {
     },
     {
       id: 10,
-      img: "https://abal.kg/wp-content/uploads/2021/05/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-07-05-2021-124040.png",
+      img: "https://sputnik.kg/img/103469/24/1034692483_0:0:1566:2048_600x0_80_0_0_b255304384f64800068e8f7b7024e808.jpg",
       title: "Жамила",
       info: {
         id: 10,

@@ -10,7 +10,7 @@
     .category {
       width: 100%;
       display: flex;
-      flex-wrap: wrap; // чтобы кнопки переносились на маленьких экранах
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       gap: 15px;
@@ -71,7 +71,6 @@
   }
 }
 
-/* Адаптивка */
 @media (max-width: 768px) {
   .Cards {
     padding: 30px 0;
