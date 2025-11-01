@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "sputnik.kg",
       },
+      {
+        protocol: "http",
+        hostname: "56.228.23.49",
+      },
     ],
   },
 };
