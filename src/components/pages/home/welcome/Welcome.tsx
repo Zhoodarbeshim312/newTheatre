@@ -1,40 +1,46 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import scss from "./Welcome.module.scss";
+import axios from "axios";
 
-import theatre1 from "../../../../../public/theatre.webp";
-import theatre2 from "../../../../../public/theater2.webp";
-import theatre3 from "../../../../../public/theater3.webp";
-
-const slides = [
-  {
-    id: 1,
-    image: theatre1,
-    genre: "Драма",
-    title: "Жамийла",
-    date: "15 АВГУСТАН БАШТАП",
-  },
-  {
-    id: 2,
-    image: theatre2,
-    genre: "Комедия",
-    title: "Көңүл ачуу",
-    date: "20 АВГУСТАН БАШТАП",
-  },
-  {
-    id: 3,
-    image: theatre3,
-    genre: "Трагедия",
-    title: "Ак кеме",
-    date: "25 АВГУСТАН БАШТАП",
-  },
-];
+export interface IData {
+  id: number;
+  title: string;
+  genre: string;
+  date: string;
+  time: string;
+  image: string;
+  age_control: number;
+  price: number;
+}
 
 const Welcome = () => {
-  const [bgImage, setBgImage] = useState(theatre1.src);
+  const [bgImage, setBgImage] = useState<string>("");
+  const [data, setData] = useState<IData[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  const getData = async () => {
+    try {
+      const res = await axios.get<IData[]>(
+        `http://56.228.23.49/ru/theatre/repertoire/`
+      );
+      setData(res.data);
+      if (res.data.length > 0) {
+        setBgImage(res.data[0].image);
+      }
+    } catch (error) {
+      console.error("Ошибка при загрузке данных:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   const settings: Settings = {
     dots: false,
@@ -44,8 +50,24 @@ const Welcome = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: true,
-    afterChange: (index: number) => setBgImage(slides[index].image.src),
+    afterChange: (index: number) => {
+      if (data[index]) {
+        setBgImage(data[index].image);
+      }
+    },
   };
+
+  if (loading)
+    return (
+      <p
+        style={{
+          textAlign: "center",
+        }}
+      >
+        Загрузка...
+      </p>
+    );
+  if (data.length === 0) return <p>Нет данных 😔</p>;
 
   return (
     <section
@@ -58,11 +80,11 @@ const Welcome = () => {
       <div className="container">
         <div className={scss.slider}>
           <Slider {...settings}>
-            {slides.map((slide) => (
-              <div key={slide.id} className={scss.slide}>
-                <h3>{slide.genre}</h3>
-                <h1>{slide.title}</h1>
-                <h3>{slide.date}</h3>
+            {data.map((item) => (
+              <div key={item.id} className={scss.slide}>
+                <h3>{item.genre || "Жанр не указан"}</h3>
+                <h1>{item.title || "Без названия"}</h1>
+                <h3>{item.date || "Дата не указана"}</h3>
                 <button>Толук маалымат алуу</button>
               </div>
             ))}
