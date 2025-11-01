@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "abal.kg",
       },
+      {
+        protocol: "https",
+        hostname: "sputnik.kg",
+      },
     ],
   },
 };

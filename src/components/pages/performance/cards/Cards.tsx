@@ -184,7 +184,7 @@ const Cards: FC = () => {
               <div key={el.id} className={scss.card}>
                 <div className={scss.imageWrapper}>
                   <Image
-                    onClick={() => router.push(`/details/${el.id}`)}
+                    onClick={() => router.push(`/performance/detail/${el.id}`)}
                     src={el.img}
                     alt={el.title}
                     fill
