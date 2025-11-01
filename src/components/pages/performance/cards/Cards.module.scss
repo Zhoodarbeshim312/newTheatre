@@ -1,0 +1,90 @@
+.Cards {
+  padding: 60px 0;
+  background: #f9f9f9;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #222;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      width: 100%;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+      }
+
+      .imageWrapper {
+        position: relative;
+        width: 100%;
+        height: 200px;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: 15px;
+        text-align: center;
+        color: #333;
+      }
+    }
+  }
+}
+
+/* 📱 Адаптив */
+@media (max-width: 768px) {
+  .Cards {
+    padding: 40px 0;
+
+    .content {
+      gap: 30px;
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .card {
+        h3 {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Cards {
+    .content {
+      .cards {
+        grid-template-columns: 1fr; /* одна карточка на маленьких экранах */
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

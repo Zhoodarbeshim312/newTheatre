@@ -43,7 +43,7 @@ const Welcome = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    arrows: false,
+    arrows: true,
     afterChange: (index: number) => setBgImage(slides[index].image.src),
   };
 
