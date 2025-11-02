@@ -17,6 +17,10 @@ const nextConfig: NextConfig = {
         protocol: "http",
         hostname: "56.228.23.49",
       },
+      {
+        protocol: "https",
+        hostname: "krasnodar-tr.gazprom.ru",
+      },
     ],
   },
 };
